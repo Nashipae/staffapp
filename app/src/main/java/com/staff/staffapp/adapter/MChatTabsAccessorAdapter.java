@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.staff.staffapp.ui.MChatContactsFragment;
 import com.staff.staffapp.ui.MChatGroupsFragment;
+import com.staff.staffapp.ui.MChatsFragment;
 
 public class MChatTabsAccessorAdapter extends FragmentPagerAdapter {
     public MChatTabsAccessorAdapter(FragmentManager fm) {
@@ -29,7 +30,7 @@ public class MChatTabsAccessorAdapter extends FragmentPagerAdapter {
                 return contactsFragment;
 
             case 3:
-                RequestsFragment requestsFragment = new RequestsFragment();
+                MChatRequestsFragment requestsFragment = new RequestsFragment();
                 return requestsFragment;
 
             default:
