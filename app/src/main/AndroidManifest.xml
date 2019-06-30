@@ -225,7 +225,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.ListActivity" />
+        <activity android:name=".ui.ListActivity"
+            android:theme="@style/NoActionBar"/>
+
         <activity android:name=".ui.ContactListActivity" />
         <activity
             android:name=".ui.NewsDetailsActivity"

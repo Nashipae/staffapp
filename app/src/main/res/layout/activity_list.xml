@@ -18,11 +18,14 @@
             android:id="@+id/chat_main_page_toolbar"
             layout="@layout/mchat_app_bar_layout" >
         </include>
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/chat_main_tabs"
             android:layout_width="match_parent"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/appBarLayout"
+            android:layout_alignBottom="@+id/appBarLayout"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         </com.google.android.material.tabs.TabLayout>
 
