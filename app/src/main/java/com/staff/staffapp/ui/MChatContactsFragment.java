@@ -51,7 +51,7 @@ public class MChatContactsFragment extends Fragment
         ContactsView = inflater.inflate(R.layout.fragment_mchat_contacts, container, false);
 
 
-        myContactsList = (RecyclerView) ContactsView.findViewById(R.id.mChats_contact_list);
+        myContactsList = ContactsView.findViewById(R.id.mChats_contact_list);
         myContactsList.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
@@ -171,7 +171,7 @@ public class MChatContactsFragment extends Fragment
             userName = itemView.findViewById(R.id.user_profile_name);
             userStatus = itemView.findViewById(R.id.user_status);
             profileImage = itemView.findViewById(R.id.users_profile_image);
-            onlineIcon = (ImageView) itemView.findViewById(R.id.user_online_status);
+            onlineIcon =  itemView.findViewById(R.id.user_online_status);
         }
     }
 }
