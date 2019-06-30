@@ -7,6 +7,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.github.abdularis.civ.AvatarImageView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.staff.staffapp.R;
 import com.staff.staffapp.adapter.MChatTabsAccessorAdapter;
 //import com.staff.staffapp.databinding.ActivityListBinding;
@@ -25,24 +28,29 @@ public class ListActivity extends AppCompatActivity {
     private TabLayout myTabLayout;
     private MChatTabsAccessorAdapter myTabsAccessorAdapter;
 
+    private FirebaseUser currentUser;
+    private FirebaseAuth mAuth;
+    private DatabaseReference RootRef;
+    private String currentUserID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         //chat_page_toolbar
 
-        mToolbar = (Toolbar) findViewById(R.id.chat_main_page_toolbar);
+        mToolbar =  findViewById(R.id.chat_main_page_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Chat");
 
         //chat_tabs_pager
-        myViewPager = (ViewPager) findViewById(R.id.chat_main_tabs_pager);
+        myViewPager =  findViewById(R.id.chat_main_tabs_pager);
         myTabsAccessorAdapter = new MChatTabsAccessorAdapter(getSupportFragmentManager());
 
         myViewPager.setAdapter(myTabsAccessorAdapter);
 
         //chat_main_tabs
-        myTabLayout = (TabLayout) findViewById(R.id.chat_main_tabs);
+        myTabLayout = findViewById(R.id.chat_main_tabs);
         myTabLayout.setupWithViewPager(myViewPager);
 
     }
