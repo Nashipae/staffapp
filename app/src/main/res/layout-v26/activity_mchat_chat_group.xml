@@ -68,7 +68,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:src="@drawable/send"
-            android:contentDescription="TODO" />
+            android:contentDescription="@string/todo" />
 
     </LinearLayout>
 
