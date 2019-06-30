@@ -8,7 +8,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.github.abdularis.civ.AvatarImageView;
 import com.google.android.material.tabs.TabLayout;
 import com.staff.staffapp.R;
-import com.staff.staffapp.adapter.ChatTabsAccessorAdapter;
+import com.staff.staffapp.adapter.MChatTabsAccessorAdapter;
 //import com.staff.staffapp.databinding.ActivityListBinding;
 
 import android.content.Intent;
@@ -23,7 +23,7 @@ public class ListActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private ViewPager myViewPager;
     private TabLayout myTabLayout;
-    private ChatTabsAccessorAdapter myTabsAccessorAdapter;
+    private MChatTabsAccessorAdapter myTabsAccessorAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class ListActivity extends AppCompatActivity {
 
         //chat_tabs_pager
         myViewPager = (ViewPager) findViewById(R.id.chat_main_tabs_pager);
-        myTabsAccessorAdapter = new ChatTabsAccessorAdapter(getSupportFragmentManager());
+        myTabsAccessorAdapter = new MChatTabsAccessorAdapter(getSupportFragmentManager());
 
         myViewPager.setAdapter(myTabsAccessorAdapter);
 
