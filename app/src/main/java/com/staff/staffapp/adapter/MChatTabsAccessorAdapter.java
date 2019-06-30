@@ -4,6 +4,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.staff.staffapp.ui.MChatContactsFragment;
+import com.staff.staffapp.ui.MChatGroupsFragment;
+
 public class MChatTabsAccessorAdapter extends FragmentPagerAdapter {
     public MChatTabsAccessorAdapter(FragmentManager fm) {
         super(fm);
