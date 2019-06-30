@@ -51,9 +51,9 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
 
-        mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
-        currentUserID = mAuth.getCurrentUser().getUid();
+       mAuth = FirebaseAuth.getInstance();
+        currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         RootRef = FirebaseDatabase.getInstance().getReference();
 
 
@@ -62,7 +62,7 @@ public class ListActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Chat");
 
 
-        myViewPager = findViewById(R.id.chat_main_page_toolbar);
+        myViewPager = findViewById(R.id.chat_main_tabs_pager);
         myTabsAccessorAdapter = new MChatTabsAccessorAdapter(getSupportFragmentManager());
         myViewPager.setAdapter(myTabsAccessorAdapter);
 
