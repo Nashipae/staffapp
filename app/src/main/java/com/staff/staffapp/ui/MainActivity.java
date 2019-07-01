@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                Intent intent = new Intent(MainActivity.this, MChatLoginActivity.class);
                 startActivity(intent);
             }
 

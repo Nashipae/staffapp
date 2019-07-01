@@ -16,13 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.MChatRegisterActivity"></activity>
-        <activity android:name=".ui.MChatSettingsActivity" />
+        <activity android:name=".ui.MChatSettingsActivity"
+            android:parentActivityName=".ui.ListActivity"/>
         <activity android:name=".ui.MChatProfileActivity" />
         <activity android:name=".ui.MChatPhoneLoginActivity" />
-        <activity android:name=".ui.MChatLoginActivity" />
-        <activity android:name=".ui.MChatChatGroupActivity" />
-        <activity android:name=".ui.MChatFindFriendsActivity" />
-        <activity android:name=".ui.MChatActivity" />
+        <activity android:name=".ui.MChatLoginActivity"
+            android:parentActivityName=".ui.MainActivity"/>
+        <activity android:name=".ui.MChatChatGroupActivity"/>
+        <activity android:name=".ui.MChatFindFriendsActivity"
+            android:parentActivityName=".ui.ListActivity"/>
+        <activity android:name=".ui.MChatActivity"
+            android:parentActivityName=".ui.ListActivity"/>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -226,7 +230,8 @@
                 android:value=".ui.MainActivity" />
         </activity>
         <activity android:name=".ui.ListActivity"
-            android:theme="@style/NoActionBar"/>
+            android:theme="@style/NoActionBar"
+            android:parentActivityName=".ui.MChatLoginActivity"/>
 
         <activity android:name=".ui.ContactListActivity" />
         <activity

@@ -12,6 +12,7 @@
         layout="@layout/mchat_app_bar_layout">
     </include>
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/private_messages_list_of_users"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/chat_toolbar"
