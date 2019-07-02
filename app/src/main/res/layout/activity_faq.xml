@@ -30,7 +30,7 @@
                 android:background="@drawable/faq2"
                 android:textSize="40dp"
                 android:gravity="center"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@android:color/black"/>
             <!--android:text="FAQ"-->
 
         <LinearLayout
