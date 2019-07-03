@@ -5,12 +5,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.staff.staffapp.ui.ChatChatFragment;
 import com.staff.staffapp.ui.ChatContactFragment;
-import com.staff.staffapp.ui.ChatGroupFragment;
+import com.staff.staffapp.ui.ChatFragment;
+import com.staff.staffapp.ui.ChatGroupsFragment;
+import com.staff.staffapp.ui.ChatRequestFragment;
 
 public class ChatTabsAccessorAdapter extends FragmentPagerAdapter {
-
 
     public ChatTabsAccessorAdapter(FragmentManager fm) {
         super(fm);
@@ -18,49 +18,44 @@ public class ChatTabsAccessorAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-        switch (i){
+
+        switch (i) {
             case 0:
-                ChatChatFragment chatChatFragment = new ChatChatFragment();
-                return chatChatFragment;
+                return new ChatFragment();
 
             case 1:
-                ChatContactFragment chatContactFragment = new ChatContactFragment();
-                return chatContactFragment;
+                return new ChatGroupsFragment();
 
             case 2:
-                ChatGroupFragment chatGroupFragment = new ChatGroupFragment();
-                return chatGroupFragment;
-                default:
-                    return null;
+                return new ChatContactFragment();
 
+
+            default:
+                return null;
         }
-
-    }
-
-    @Override
-    public int getCount() {
-        return 3;
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-
-        switch (position){
+        switch (position) {
             case 0:
                 return "Chats";
 
-
             case 1:
+                return "Groups";
+
+            case 2:
                 return "Contacts";
 
 
-            case 2:
-                return "Groups";
-                default:
-                    return null;
-
+            default:
+                return null;
         }
+    }
 
+    @Override
+    public int getCount() {
+        return 3;
     }
 }
