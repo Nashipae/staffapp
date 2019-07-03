@@ -1,5 +1,6 @@
 package com.staff.staffapp.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
@@ -19,6 +20,7 @@ import com.staff.staffapp.databinding.ActivityListBinding;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -51,7 +53,32 @@ public class ListActivity extends AppCompatActivity {
         myTabLayout.setupWithViewPager(myViewPager);
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+        if (item.getItemId() == R.id.main_logout_option) {
+            mAuth.signOut();
+            SendUserToLoginActivity():
+
+        }
+
+        if (item.getItemId() == R.id.main_settings_option) {
+
+        }
+
+        if (item.getItemId() == R.id.main_find_friends_option) {
+        }
+        return true;
+    }
 }
+
 
 
     // @Override
